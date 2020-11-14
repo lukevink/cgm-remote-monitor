@@ -72,8 +72,12 @@ html, body {
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  background: #000;
+  background: #2C2E30;
   color: #bdbdbd;
+  padding: 5px;
+}
+#toolbar {
+  display: none !important;
 }
 
 .container {
@@ -124,9 +128,10 @@ a, a:visited, a:link {
 
 .bgStatus {
   float: right;
-  text-align: center;
+  text-align: right !important;
+  padding-right: none  !important;
+  margin-right: 10px  !important;
   white-space: normal;
-  padding-right: 20px;
 }
 
 .urgent .bgButton {
@@ -146,7 +151,7 @@ a, a:visited, a:link {
 }
 
 .bgStatus .currentBG {
-  font-size: 120px;
+  font-size: 150px;
   line-height: 100px;
   text-decoration: line-through;
   vertical-align: middle;
@@ -164,7 +169,138 @@ a, a:visited, a:link {
   vertical-align: middle;
   border: none;
   background: none;
+  margin-right: 10px;
 }
+
+#currentTime{
+    width: auto;
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgb(30, 32, 34);
+    border-radius: 5px;
+}
+
+/* ----------------- Direction SVG ------------------ */
+
+#sugar-direction{
+	display: inline-block;
+}
+		
+.center-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.center-con.one{
+	display: flex;
+}
+
+.center-con.two{
+	display: flex;
+}
+.center-con.three{
+	display: flex;
+}
+.round {
+    position: absolute;
+    border: 2px solid #f0f0f0;
+/*     background: #f0f0f0; */
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    transform: rotate(0deg) scale(1.4);
+}
+
+.round.flat{
+	transform: rotate(0deg) scale(1.4);
+}
+.round.45Up{
+	transform: rotate(-45deg) scale(1.4);
+}
+.round.45Down{
+	transform: rotate(45deg) scale(1.4);
+}
+.round.up{
+	transform: rotate(-90deg) scale(1.4);
+}
+.round.down{
+	transform: rotate(90deg) scale(1.4);
+}
+
+
+#cta{
+        /* width: 100%; */
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -8px;
+        margin-top: -22px;
+
+}
+
+
+/* background-image: url("data:image/svg+xml,%3Csvg width='296px' height='484px' viewBox='0 0 296 484' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='download' fill='%23000000' fill-rule='nonzero'%3E%3Cpath d='M280.1,205 C300.3,225.2 300,258.2 279.5,278.7 C259,299.2 226,299.5 205.8,279.3 L15.8,89.3 C-4.3,69.1 -4,36.1 16.5,15.6 C37,-4.9 70,-5.2 90.1,15 L280.1,205 Z' id='Path'%3E%3C/path%3E%3Cpath d='M280.1,278.5 C300.3,258.3 300,225.3 279.5,204.8 C259,184.3 226,184 205.8,204.2 L15.8,394.2 C-4.4,414.4 -4.1,447.4 16.4,467.9 C36.9,488.4 69.9,488.7 90.1,468.5 L280.1,278.5 L280.1,278.5 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+
+
+#cta .arrow{left: 30%;}
+.arrow {position: absolute; color: black; bottom: 0;  margin-left:0px; width: 12px; height: 12px; background-size: contain; top:15px;}
+.center-con.one .first{margin-left: 4px;}
+.second{margin-left: 8px;}
+.center-con.three .first{margin-left: -2px;}
+.center-con.three .second{margin-left: 4px;}
+.center-con.three .third{margin-left: 10px;}
+
+.next {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojMDAwfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+.next.white {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+
+@keyframes bounceAlpha {
+  0% {opacity: 1; transform: translateX(0px) scale(1);}
+  5%{opacity: 0; transform:translateX(10px) scale(0.9);}
+  6%{opacity: 0; transform:translateX(-10px) scale(0.9);}
+  12% {opacity: 1; transform: translateX(0px) scale(1);}
+}
+
+.bounceAlpha {
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+.arrow.first.bounceAlpha {
+    animation-name: bounceAlpha;
+    animation-duration:5s;
+    animation-delay:0.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+.round .arrow{
+    animation-name: bounceAlpha;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+.round .arrow.first{
+    animation-name: bounceAlpha;
+    animation-duration:5s;
+    animation-delay:0.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+
+/* ----------------------------------- */
+
+
 
 .bgStatus .majorPills {
   font-size: 30px;
@@ -189,8 +325,8 @@ a, a:visited, a:link {
 .pill {
   white-space: nowrap;
   border-radius: 5px;
-  border: 2px solid #808080;
-  background: #808080;
+  border: 0px solid #808080;
+  background: none;
   display: inline-block;
   margin-bottom: 4px;
   padding: 2px 0;
@@ -206,10 +342,11 @@ a, a:visited, a:link {
   font-weight: bold;
   background: #000;
   border-radius: 3px;
+  display: none !important;
 }
 
 .pill label {
-  color: #000;
+  color: #808080;
 }
 
 .container .pill.warn em {
@@ -241,20 +378,24 @@ a, a:visited, a:link {
 .alarming-timeago .bgStatus.current .currentBG {
   text-decoration: line-through;
 }
-
+.open-top{
+  stroke: #2C2E30;
+}
 .status {
   color: #808080;
-  font-size: 100px;
+  font-size: 50px;
   white-space: normal;
 }
 .statusBox {
-  text-align: center;
-  width: 40%;
+  text-align: left;
+  width: auto;
+  margin: 0px 0px 0px 10px;
 }
 .statusPills {
   font-size: 20px;
   line-height: 23px;
   margin-left: 5px;
+  display: none;
 }
 
 .loading .statusPills {
@@ -277,7 +418,7 @@ a, a:visited, a:link {
   bottom: 0;
   height: auto;
   font-size: 20px;
-  background: #111;
+  background: none;
   display: block;
   position: absolute;
   margin: 2px;
@@ -314,7 +455,7 @@ a, a:visited, a:link {
 
 .bgButton {
   margin: 10px;
-  border: 2px solid #000;
+  border: 0px solid #000;
   border-radius: 5px;
   display: inline-block;
   width: 360px;
@@ -401,11 +542,12 @@ a, a:visited, a:link {
 
 .focus-range {
   list-style: none;
-  margin: 4px;
+  margin: 15px 4px 4px 4px;
   padding: 0;
   color: #808080;
-  width: 40%;
-  text-align: center;
+  padding-left: 10px;
+  width: auto!important;
+  text-align: left!important;
 }
 
 .focus-range li {
@@ -413,8 +555,11 @@ a, a:visited, a:link {
   font-size: 18px;
   white-space: nowrap;
   border-radius: 5px;
-  border: 2px solid #000;
+  border: 0px solid #000;
   cursor: pointer;
+    padding: 12px 16px;
+    margin-right: 5px;
+    background: #1E2022;
 }
 
 .focus-range .selected {
